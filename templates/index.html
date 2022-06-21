@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <title>One</title>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/archive/5/53/20210618182605%21Google_%22G%22_Logo.svg" alt="" class="">
+    <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Blank-map-world-south-up.png" alt="" class=""> -->
+    <br>
+    <form action="greet" class="" method="post">
+       {% for message in get_flashed_messages() %}
+        <p>{{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="GREET" id="greet">
+
+    </form>
+</body>
+</html>
